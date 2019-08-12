@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="kozłowski.c0.pl/test.xslt"?>
+<Raport>		
+	<Dane>
+		
+		<Nabywca>Grzegorz Brzeczyszczykiewicz</Nabywca>
+		<Adres>ul. Nibylandzka, 12-345 Warszawa</Adres>
+	</Dane>
+	
+	<Faktura>
+		<Miasto>Warszawa</Miasto>
+		<DataS>23-05-2017</DataS>
+		<DataW>24-05-2017</DataW>
+		<Numer>11 12 13</Numer>
+	</Faktura>
+		
+	<Zakupy>
+		<Wystawil>Kacper Kozłowski</Wystawil>
+		<Odebral>Grzegorz Brzeczyszczykiewicz</Odebral>
+		<Suma>
+			<Brutto>752</Brutto>
+			<Vat>240</Vat>
+			<Netto>512</Netto>
+			<Slownie>piecset dwanascie</Slownie>
+			<Dozaplaty>600</Dozaplaty>
+			<Forma>Karta</Forma>
+			<Zaplacono>Tak</Zaplacono>
+			<Termin>23-05-2017</Termin>
+		</Suma>
+		<Produkty>
+			<Produkt>
+				<Nazwa>Torba</Nazwa>
+				<Pkwiu>12</Pkwiu>
+				<Jm>-</Jm>
+				<Ilosc>1</Ilosc>
+				<Cena>230</Cena>
+				<WartBrutto>230</WartBrutto>
+				<VatP>23</VatP>
+				<VatW>76</VatW>
+				<WartNetto>154</WartNetto>
+			</Produkt>
+			<Produkt>
+				<Nazwa>Buty</Nazwa>
+				<Pkwiu>12</Pkwiu>
+				<Jm>-</Jm>
+				<Ilosc>1</Ilosc>
+				<Cena>300</Cena>
+				<WartBrutto>300</WartBrutto>
+				<VatP>23</VatP>
+				<VatW>69</VatW>
+				<WartNetto>231</WartNetto>	
+			</Produkt>
+			<Produkt>
+				<Nazwa>Piłka</Nazwa>
+				<Pkwiu>15</Pkwiu>
+				<Jm>-</Jm>
+				<Ilosc>1</Ilosc>
+				<Cena>60</Cena>
+				<WartBrutto>60</WartBrutto>
+				<VatP>23</VatP>
+				<VatW>12.5</VatW>
+				<WartNetto>47.5</WartNetto>
+			</Produkt>
+			<Produkt>
+				<Nazwa>Basen</Nazwa>
+				<Pkwiu>1200</Pkwiu>
+				<Jm>-</Jm>
+				<Ilosc>1</Ilosc>
+				<Cena>1200</Cena>
+				<WartBrutto>1200</WartBrutto>
+				<VatP>23</VatP>
+				<VatW>276</VatW>
+				<WartNetto>924</WartNetto>
+			</Produkt>
+		</Produkty>
+	</Zakupy>	
+</Raport>
