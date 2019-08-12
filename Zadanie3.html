@@ -1,0 +1,76 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"><html><head><META http-equiv="Content-Type" content="text/html; charset=utf-8"><script src = "z6.js"></script></head><body>
+
+<div>
+
+<form action="http://www.wp.pl" method="get" target="_blank" onsubmit="try {return window.confirm(&quot;Podane informacje zostaną wysłane na stronę zewnętrzną. Czy chcesz kontynuować?&quot;);} catch (e) {return false;}">
+
+<input type="hidden" value="1" name="ukryte"><br>
+		<b>Podstawowe informacje </b><br>
+<table>
+		<tr>
+      <td width = "20%">Podaj imię: </td>
+      <td valign ="right"><input type="text" name="imie"><label id="imie-blad"></label>
+      </td>
+    </tr>
+		<tr>
+      <td>Podaj nazwisko: </td>
+      <td valign = "right"><input type="text" name="nazwisko"><label id="nazwisko-blad"></label>
+      </td>
+    </tr>
+		<tr>
+      <td>Podaj adres: ul. </td>
+      <td valign = "right"><input type="text" name="ulica"> nr domu <input type="text" name="nr domu"> nr mieszkania <input type="text" name="nr mieszkania"> 
+      </td>
+    </tr>
+		<tr>
+      <td>Podaj kod pocztowy: </td>
+      <td valign = "right"> <input type="text" name="1">-<input type="text" name="2">
+      </td>
+    </tr>	
+		<tr>
+      <td>Podaj miasto: </td>
+      <td valign = "right"><input type="text" name="miasto">
+      </td>
+    </tr>
+		<tr>
+      <td>Podaj datę urodzenia (DD-MM-RRRR): <br> 
+			<td><input type="text" name="dzień" maxlength = 2>&nbsp<input type="text" name="miesiąc" maxlength = 2>&nbsp<input type="text" name="rok" maxlength = 4>
+      </td>
+    </tr>
+		<tr>
+      <td>Podaj telefon:</td>
+      <td> <input type="text" name="nrtel" maxlength = "9">
+      </td>
+    </tr>
+</table>
+<table>
+		<br><b> Informacje dotyczące przyszłej pracy: </b><br>
+		<tr>
+      <td> Jakie masz wykształcenie: podstawowe<input type="radio" name="wyksztalcenie" value="podstawowe">średnie<input type="radio" name="wyksztalcenie" value="średnie">średnie zawodowe<input type="radio" name="wyksztalcenie" value="średnie zawodowe">wyższe<input type="radio" name="wyksztalcenie" value="wyższe">
+      </td>
+    </tr>
+		<tr>
+      <td>Forma wypłaty:<br>
+			<select name="formawyplaty">
+				<option>Przelewem na konto</option>
+				<option>W gotówce</option>
+				<option>Częściowo przelewem, częściowo w gotówce</option>
+				<option>Częściowo przelewem, częściowo w bonach żywieniowych</option>			
+			</select>
+      </td>
+     </tr>
+		<tr>
+      <td>Zaznacz, że nie jesteś robotem: <input type="checkbox" name="zaznaczenie" value="nie">
+      </td>
+    </tr>
+<tr><td>
+		<input type="reset" name="p1" value="Czyść">
+		<input type="submit" name="p2" value="Wyślij">
+    </td>
+  </tr>
+</table>
+</form>	
+</div>
+
+</body>
+</html>
