@@ -1,0 +1,120 @@
+<!doctype html> 
+   <html lang="pl"> 
+      <head> 
+		<style>
+			input[type=button]{
+				width: 50px;
+				font-size: 18px;
+				margin: 5px
+			}
+			input[type=text]{
+				width: 250px;
+				text-align: right;
+				font-size: 25px;
+			}
+			table{
+				padding: 5px;
+				
+			}
+			td {
+				text-align: center;
+			}
+			.cztery{
+				width: 25%
+			}
+			.jeden{
+				width: 100%
+			}
+		</style>
+         <meta charset=utf-8>
+         <title>Kalkulator w JavaScript</title>
+      </head>
+      <body>
+ 
+ 
+        <form name="kalk">
+			<div>
+						<input name="txtEkran" type="text" value=0 readonly />
+			</div>
+				
+				<div class = "cztery">
+			
+						<input type="button" value=7 onclick="klikCyfra(7)" />
+						<input type="button" value=8 onclick="klikCyfra(8)" />
+						<input type="button" value=9 onclick="klikCyfra(9)" />
+						<input type="button" value="/" onclick="klikOperator('/')" />
+					</div>
+				<div>
+						<input type="button" value=4 onclick="klikCyfra(4)" />
+						<input type="button" value=5 onclick="klikCyfra(5)" />
+						<input type="button" value=6 onclick="klikCyfra(6)" />
+						<input type="button" value="*" onclick="klikOperator('*')" />
+					</div>
+				<div class = "cztery">
+						<input type="button" value=1 onclick="klikCyfra(1)" />
+						<input type="button" value=2 onclick="klikCyfra(2)" />
+						<input type="button" value=3 onclick="klikCyfra(3)" />
+						<input type="button" value="-" onclick="klikOperator('-')" />
+					
+				</div>
+				<div class = "cztery">
+						<input type="button" value=0 onclick="klikCyfra(0)" />
+						<input type="button" value="," onclick="przecinek()" />
+						<input type="button" value="=" onclick="klikRownanie()" />
+						<input type="button" value="+" onclick="klikOperator('+')" />
+				</div>
+		
+		</form>
+		<script type="text/javascript">
+			var formKalk = window.document.kalk;
+			var op;
+			var cyfraPierwsza = true;
+			var c1 = 0, c2 = 0;
+ 
+			function klikCyfra(cyfra){
+				if (cyfraPierwsza || formKalk.txtEkran.value == 0){
+					formKalk.txtEkran.value  = cyfra;
+					cyfraPierwsza = false;
+				}else{
+					formKalk.txtEkran.value += cyfra;
+				}
+			}
+ 
+			function klikOperator(opr){
+				var txtEkran = formKalk.txtEkran.value;
+				c1 = txtEkran;
+				op = opr;
+				cyfraPierwsza = true;
+			}
+ 
+			function klikRownanie(){
+				var rezultat;
+				var txtEkran = formKalk.txtEkran.value;
+				c2 = txtEkran;
+				if(op == "/") {
+				rezultat = c1 / c2;
+				}else if(op == "*") {
+					rezultat = c1 * c2;
+				}else if(op == "-"){
+					rezultat = c1 - c2;
+				}else{
+					rezultat = c1 + c2;
+				}
+				formKalk.txtEkran.value = rezultat;
+				c1 = rezultat;
+				cyfraPierwsza = true;
+			}
+ 
+			function przecinek(){
+				var txtEkran = formKalk.txtEkran.value;
+				if (txtEkran.indexOf(".") == -1) {
+					txtEkran += ".";
+					formKalk.txtEkran.value = txtEkran;
+					cyfraPierwsza = false;
+				}
+			}
+ 
+		</script>
+ 
+      </body>
+   </html>
